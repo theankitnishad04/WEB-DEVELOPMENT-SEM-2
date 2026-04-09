@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Pattern Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+  <h2>Number Pattern Generator</h2>
+  
+ 
+  <label>Enter a number (N): </label>
+  <input type="number" id="numInput">
+  <button onclick="generatePattern()">Generate</button>
+  
+
+  <pre id="output"></pre>
+  
+  <script>
+    function generatePattern() {
+      
+      let N = document.getElementById("numInput").value;
+      let result = "";
+
+      
+      for (let i = 1; i <= N; i++) {       
+        for (let j = 1; j <= i; j++) {     
+          result += j + " ";               
+        }
+        result += "\n";                    
+      }
+
+      document.getElementById("output").innerHTML = result;
+    }
+  </script>
+</body>
+</html>
+
+
+
