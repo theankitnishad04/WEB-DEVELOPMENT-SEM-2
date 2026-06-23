@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest Number Finder</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            margin-top:50px;
+        }
+        input{
+            width:100px;
+            padding:8px;
+            margin:5px;
+        }
+        button{
+            padding:10px 20px;
+            cursor:pointer;
+        }
+        h3{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Largest Number Finder</h2>
+
+<input type="number" id="n1" placeholder="Number 1"><br>
+
+<input type="number" id="n2" placeholder="Number 2"><br>
+
+<input type="number" id="n3" placeholder="Number 3"><br>
+
+<input type="number" id="n4" placeholder="Number 4"><br>
+
+<input type="number" id="n5" placeholder="Number 5"><br><br>
+
+<button onclick="largestNumber()">Find Largest</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+function largestNumber(){
+
+    let n1 = Number(document.getElementById("n1").value);
+    let n2 = Number(document.getElementById("n2").value);
+    let n3 = Number(document.getElementById("n3").value);
+    let n4 = Number(document.getElementById("n4").value);
+    let n5 = Number(document.getElementById("n5").value);
+
+    let largest;
+
+    if(n1>=n2 && n1>=n3 && n1>=n4 && n1>=n5)
+    {
+        largest=n1;
+    }
+    else if(n2>=n1 && n2>=n3 && n2>=n4 && n2>=n5)
+    {
+        largest=n2;
+    }
+    else if(n3>=n1 && n3>=n2 && n3>=n4 && n3>=n5)
+    {
+        largest=n3;
+    }
+    else if(n4>=n1 && n4>=n2 && n4>=n3 && n4>=n5)
+    {
+        largest=n4;
+    }
+    else
+    {
+        largest=n5;
+    }
+
+    document.getElementById("result").innerHTML =
+    "Largest Number is : " + largest;
+
+}
+
+</script>
+
+</body>
+</html>
